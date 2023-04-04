@@ -122,7 +122,7 @@ hr.RampBreak--l {
 }
 
 .RampInputCheckbox--container {
-  display: flex;
+  position: relative;
 }
 
 .RampInputCheckbox--label {
@@ -137,12 +137,8 @@ hr.RampBreak--l {
   cursor: pointer;
 }
 
-.RampInputCheckbox--label-disabled {
-  cursor: progress;
-}
-
 .RampInputCheckbox--label-checked:before {
-  content: " ";
+  content: "";
   width: 100%;
   height: 100%;
   border-color: var(--color-constructive);
@@ -150,7 +146,15 @@ hr.RampBreak--l {
 }
 
 .RampInputCheckbox--input {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  margin: 4px;
+  top: 0;
+}
+
+.RampInputCheckbox--label-disabled {
+  cursor: progress;
 }
 
 .RampButton {
