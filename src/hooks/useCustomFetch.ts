@@ -67,7 +67,13 @@ export function useCustomFetch() {
     [cache]
   )
 
-  return { fetchWithCache, fetchWithoutCache, clearCache, clearCacheByEndpoint, loading }
+  return {
+    fetchWithCache,
+    fetchWithoutCache,
+    clearCache,
+    clearCacheByEndpoint,
+    loading,
+  }
 }
 
 function getCacheKey(endpoint: RegisteredEndpoints, params?: object) {
