@@ -18,8 +18,6 @@ export function App() {
     [paginatedTransactions, transactionsByEmployee]
   )
 
-  console.log("app", transactions)
-
   const loadAllTransactions = useCallback(async () => {
     transactionsByEmployeeUtils.invalidateData()
 
